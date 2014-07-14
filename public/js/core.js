@@ -4,33 +4,30 @@ var check = false;
 return check; }
 
 $(document).foundation();
-// $('a.left-off-canvas-toggle').on('click',function(){});
 
 $(document).ready(function(){
 
 	if ( window.mobilecheck() == true ) {
-		// $('.mobile').css('display', 'block');
-		$('.desktop').css('display', 'block');
+		// Adjust nav for mobile
 		var prepend = "<li><a href='#'>Menu</a></li>";
-		var append = "<li><a href='#'>Court Reporting</a></li>";
+		var append  = "<li><a href='#'>Court Reporting</a></li>";
 		append += "<li><a href='#'>Transcription</a></li>";
 		append += "<li><a href='#'>Trial Support</a></li>";
 		append += "<li><a href='#'>Corporate</a></li>";
 		$('.menu-prepend').prepend(prepend);
 		$('.menu-prepend').append(append);
+
 		$('.no-mobile').hide();
+		$('#header').hide();
+
+		// Mobile adjustments
 		$('.hero').css('background', 'none');
 		$('.map-section').css('border-left', '0');
 		$('.testimonials').find('.large-2').css('display', 'none');
 		$('.news-feed').css('padding-top', '50px').css('margin-top', '50px').css('border-top', '1px solid #ccc');
-		$('#header').hide();
 		$('.footer').css('text-align', 'center');
 		$('.bottom-nav-wrap').css('padding', '20px 0 0 0');
 		$('.bottom-nav').css('margin-right', '0');
-
-
-	} else {
-		$('.desktop').css('display', 'block');
 	}
 
 	$('.anchor').click(function() {
