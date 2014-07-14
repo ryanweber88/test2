@@ -40,9 +40,13 @@ body{
 					li{
 						transition:all 0.5s ease;
 
-						a:hover{
-							background:#ccc;
-							transition:all 0.5s ease;
+						a{
+							font-weight:600;
+
+							&:hover{
+								background:#ccc;
+								transition:all 0.5s ease;
+							}
 						}
 					}
 				}
@@ -91,7 +95,9 @@ body{
 
 						a{
 							color:#c41230;
-							font-weight:600;
+							font-weight:500;
+							font-family:'Ubuntu';
+							font-style:italic;
 
 							img{
 								margin-right:3px;
